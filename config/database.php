@@ -90,6 +90,12 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        // 追加
+        'sqlite_testing' => [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ],
 
     ],
 
