@@ -22,6 +22,7 @@ class RegisterController extends Controller
     |
     */
 
+    //トレイト使用
     use RegistersUsers;
 
     /**
