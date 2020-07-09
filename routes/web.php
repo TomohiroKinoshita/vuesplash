@@ -18,6 +18,5 @@ Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
 
 
 
-Auth::routes();
+// Auth::routes(); 削除
 
-Route::get('/home', 'HomeController@index')->name('home');
