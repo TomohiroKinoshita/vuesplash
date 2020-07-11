@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // 会員登録
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
