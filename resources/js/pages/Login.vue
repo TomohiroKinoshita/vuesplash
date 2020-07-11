@@ -70,8 +70,6 @@ export default {
   },
   methods: {
 
-  login () {/* 中略 */},
-
   async register () {
 
     // authストアのresigterアクションを呼び出す
@@ -84,11 +82,19 @@ export default {
     // authストアのloginアクションを呼び出す
     await this.$store.dispatch('auth/login', this.loginForm)
 
+      if (this.apiStatus) {
     // トップページに移動する
     this.$router.push('/')
-}
+      }
+  }
 
-}
+},
+computed: {
+  apiStatus () {
+    return this.$store.state.auth.apiStatus
+  }
+},
+
 
 }
 </script>

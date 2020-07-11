@@ -27,7 +27,13 @@ const routes = [
         next()
       }
     }
+    
+  },
+  {
+    path: '/500',
+    component: SystemError
   }
+
 ]
 
 // VueRouterインスタンスを作成する
