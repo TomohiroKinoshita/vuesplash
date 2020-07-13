@@ -7,7 +7,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
+
+
 {
+
     use Notifiable;
 
     /**
@@ -24,9 +27,15 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
+    // protected $hidden = [
+    //     'password', 'remember_token',
+    // ];
+
+
+    protected $visible = [
+        'name',
     ];
+    
 
     /**
      * The attributes that should be cast to native types.
