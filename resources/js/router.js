@@ -7,6 +7,7 @@ import Login from './pages/Login.vue'
 
 import store from './store' // ★　追加
 import SystemError from './pages/errors/System.vue'
+import PhotoDetail from './pages/PhotoDetail.vue'
 
 
 // VueRouterプラグインを使用する
@@ -18,6 +19,11 @@ const routes = [
   {
     path: '/',
     component: PhotoList
+  },
+  {
+    path: '/photos/:id',
+    component: PhotoDetail,
+    props: true
   },
   {
     path: '/login',
