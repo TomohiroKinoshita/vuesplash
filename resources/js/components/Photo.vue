@@ -47,6 +47,14 @@
                 type: Object,
                 required: true
             }
+        },
+        methods: {
+            like(){
+                this.$emit('like', {
+                    id: this.item.id,
+                    liked: this.item.liked_by_user
+                })
+            }
         }
     }
 </script>            
