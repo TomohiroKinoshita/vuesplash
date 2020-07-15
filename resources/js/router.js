@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import PhotoList from './pages/PhotoList.vue'
 import PhotoDetail from './pages/PhotoDetail.vue'
 import Login from './pages/Login.vue'
+import NotFound from './pages/errors/NotFound.vue'
 
 import store from './store' // ★　追加
 import SystemError from './pages/errors/System.vue'
@@ -45,6 +46,10 @@ const routes = [
   {
     path: '/500',
     component: SystemError
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 
 ]
